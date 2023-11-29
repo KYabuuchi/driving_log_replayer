@@ -25,7 +25,7 @@ def generate_launch_description() -> launch.LaunchDescription:
         pose_source="ndt_yabloc",
     )
     rviz_node = driving_log_replayer.launch_common.get_rviz("localization.rviz")
-    evaluator_node = driving_log_replayer.launch_common.get_evaluator_node("ar_tag_based_localizer")
+    evaluator_node = driving_log_replayer.launch_common.get_evaluator_node("multi_localizer")
     player = driving_log_replayer.launch_common.get_player()
     recorder = driving_log_replayer.launch_common.get_recorder(
         "localization.qos.yaml",
